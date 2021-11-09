@@ -14,18 +14,25 @@
     </div>
     <div class="card box-shadow mt-40">
       <div class="card-body">
-        <form name="payment-form">
+        <form id="payment-form" name="payment-form" data-secret="{{ client_secret}}">
           <div>
             <label for="email">Email address</label>
             <input type="email" class="form-control" id="email" name="email" placeholder="you@email.com">
           </div>
-          <div class="mt-20 text-center text-secondary border-placeholder">
+          <div id="payment-element" class="mt-20 text-center text-secondary border-placeholder">
             Add Stripe Element here!
           </div>
+          <div id="error-message">
+            <!-- Display error message to your customers here -->
+          </div>
           <div class="mt-20">
-            <button type="submit" class="btn btn-lg btn-block btn-primary">Pay $<span class="amount" data-amount="{{amount}}"></span></button>
+            <button id="submit" type="submit" class="btn btn-lg btn-block btn-primary">Pay $<span class="amount" data-amount="{{amount}}"></span></button>
+            <div class="spinner hidden" id="spinner"></div>
           </div>
         </form>
+        <script type="text/javascript">let secret = '{{client_secret}}';</script>
+        <script src="https://js.stripe.com/v3/"></script>
+        <script type="text/javascript" src="/js/checkout.js"></script>
       </div>
     </div>
   </div>
