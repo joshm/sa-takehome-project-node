@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const exphbs = require('express-handlebars');
 require('dotenv').config();
-const stripe = require('stripe')('sk_test_51JtI7yErofK4XECd5tQ582VKPNAKHirdexiIh03kkpPefHIuJnr1Z8TC25qKns1e9g2lmSrlStvejWXZsH0A1KfI00dMVkrw4v');
+const stripe = require('stripe')('<STRIPE_SK_KEY_HERE>');
 
 var app = express();
 
