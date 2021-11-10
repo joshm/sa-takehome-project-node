@@ -1,4 +1,4 @@
-const stripe = Stripe("<ADD_PUBLISHABLE_KEY_HERE>");
+const stripe = Stripe("pk_test_51JtI7yErofK4XECd2dYbSI2lxpvJ8EB23nbt6QepueEjbnedAIq22ddhaWYF6tpgNjVKKIXX1tWYU7XYQXEIEjh500te4KedYW");
 
 let elements;
 
